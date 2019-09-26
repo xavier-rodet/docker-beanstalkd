@@ -4,4 +4,4 @@ ENV BINLOG /var/lib/beanstalkd/binlog/
 
 RUN apk add --no-cache beanstalkd
 
-ENTRYPOINT ["/bin/bash", "-c", $BINLOG]
+ENTRYPOINT ["beanstalkd", "-c", $BINLOG]
